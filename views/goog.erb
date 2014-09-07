@@ -1,0 +1,9 @@
+<h2>Google's latest stock price is: $<%= @quote %> <h2>
+
+<div class="search-bar">
+<form method="POST" action="/market">
+  <label for="search"></label>
+  <input type="text" name="search" id="search" style="width:500px;"/>
+  <input type="submit" value="go" />
+</form>
+</div>

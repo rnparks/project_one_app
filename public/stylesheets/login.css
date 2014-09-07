@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+}
+
+#login-text {
+  font-size: 14px;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica;
+  text-align: center;
+}
+
+#cube {
+  background-color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+}
