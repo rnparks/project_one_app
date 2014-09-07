@@ -2,12 +2,17 @@
 html{
   border: solid gray 1px;
   margin: 10px;
-  padding: 5px;
+  padding: 2px;
   height: 100%;
+  background-color: white;
 
 }
 
-
+body {
+  font-family: "Helvetica Neue", Helvetica;
+  background-color: white;
+  height:99%;
+}
 
 
 .search-bar {
@@ -24,17 +29,41 @@ table.MGMT {
 }
 
 p.description {
- font-size: 13px
+ font-size: 13px;
+ font-family: "Garamond";
 
 }
 
 
-.mkt th {
+.equity-index th {
 font-size: 12px;
 }
 
-.mkt td {
+.equity-index td {
 font-size: 10px;
 color: blue;
 width: 80px;
 }
+
+.currency-index th {
+font-size: 12px;
+}
+
+.currency-index td {
+font-size: 10px;
+color: blue;
+width: 80px;
+}
+
+.commodities-index th {
+  font-size: 12px;
+}
+
+.commodities-index td {
+  font-size: 10px;
+  color: blue;
+  width: 80px;
+}
+
+
+

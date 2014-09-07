@@ -3,6 +3,7 @@ require 'httparty'
 require 'securerandom'
 require 'pry'
 require 'json'
+require './views/pricing'
 
 class App < Sinatra::Base
 
@@ -56,18 +57,6 @@ class App < Sinatra::Base
     end
 
     get('/market') do
-      #S&P500 Raw Data
-      sp500_raw = HTTParty.get("http://download.finance.yahoo.com/d/quotes.csv?s=%5EGSPC&f=l1.csv")
-      @sp500_price = sp500_raw.split(",")[0].to_f
-      @sp500_movement = sp500_raw.split(",")[2].gsub("\"", "")
-
-      #Nasdaq Raw Data
-      nasdaq_raw = HTTParty.get("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22%5EIXIC%22)&env=store://datatables.org/alltableswithkeys")
-      @nasdaq_price = nasdaq_raw["query"]["results"]["quote"]["LastTradePriceOnly"]
-      @nasdaq_movement = nasdaq_raw["query"]["results"]["quote"]["Change_PercentChange"]
-
-
-
 
       if session[:access_token] == nil
         redirect to('/')
@@ -77,10 +66,13 @@ class App < Sinatra::Base
     end
 
     post('/market') do
-      search = params[:search].downcase
-      redirect to("/#{search}")
+      search = params[:search].downcase.split(" ")
+      if search.size == 1
+        redirect to("/#{search[0]}")
+      else
+        redirect to("/#{search[0]}/#{search[1]}")
+      end
     end
-
 
     get('/goog') do
       google_quote = HTTParty.get("http://download.finance.yahoo.com/d/quotes.csv?s=GOOG&f=l1.csv")
