@@ -1,7 +1,40 @@
 
-.search-bar {
-  width: 50%;
-  margin: auto;
+html{
+  border: solid gray 1px;
+  margin: 10px;
+  padding: 5px;
+  height: 100%;
+
 }
 
 
+
+
+.search-bar {
+  width: 50%;
+  margin: auto;
+
+}
+
+table.MGMT {
+  width: 50%;
+  margin: auto;
+  border: solid black 1px;
+  font: color="blue";
+}
+
+p.description {
+ font-size: 13px
+
+}
+
+
+.mkt th {
+font-size: 12px;
+}
+
+.mkt td {
+font-size: 10px;
+color: blue;
+width: 80px;
+}

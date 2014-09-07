@@ -1,4 +1,4 @@
-<h2> you made it motherfucker <h2>
+
 
 <div class="search-bar">
 <form method="POST" action="/market">
@@ -7,6 +7,39 @@
   <input type="submit" value="go" />
 </form>
 </div>
+
+
+<h2> Market page </h>
+
+<TABLE CLASS="mkt">
+   <TR>
+      <TH COLSPAN="3">
+      <H3>US Indexes</H3>
+      </TH>
+   </TR>
+   <TR>
+      <TH>Index</TH>
+      <TH>Price</TH>
+      <TH>Up/down</TH>
+   </TR>
+   <TR ALIGN="CENTER">
+      <TD>S&P500</TD>
+      <TD> <%= @sp500_price %>    </TD>
+      <TD> <%= @sp500_movement %>  </TD>
+   </TR>
+   <TR ALIGN="CENTER">
+      <TD>NASDAQ</TD>
+      <TD> <%= @nasdaq_price %>    </TD>
+      <TD> <%= @nasdaq_movement %>  </TD>
+   </TR>
+   <TR ALIGN="CENTER">
+      <TD>10yr</TD>
+      <TD> <%= @sp500_price %>    </TD>
+      <TD> <%= @sp500_movement %>  </TD>
+   </TR>
+</TABLE>
+
+
 
 
 
