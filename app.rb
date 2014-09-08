@@ -4,6 +4,8 @@ require 'securerandom'
 require 'pry'
 require 'json'
 require './views/pricing'
+require './views/googlefinancials'
+
 
 class App < Sinatra::Base
 
@@ -74,13 +76,19 @@ class App < Sinatra::Base
       end
     end
 
-    get('/goog') do
+    get('/goog/des') do
       google_quote = HTTParty.get("http://download.finance.yahoo.com/d/quotes.csv?s=GOOG&f=l1.csv")
       @quote = google_quote.split(",")[0].to_f
       render(:erb, :goog)
     end
 
-    get('/aapl') do
+    get('/goog/is') do
+
+      render(:erb, :goog_is)
+    end
+
+
+    get('/aapl/des') do
       aapl_quote = HTTParty.get("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL&f=l1.csv")
       @quote = aapl_quote.split(",")[0].to_f
       render(:erb, :aapl)

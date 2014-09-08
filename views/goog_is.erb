@@ -1,0 +1,34 @@
+
+<div class="search-bar">
+<form method="POST" action="/market">
+  <label for="search"></label>
+  <input type="text" name="search" id="search" style="width:500px;"/>
+  <input type="submit" value="go" />
+</form>
+</div>
+
+
+<TABLE CLASS="financial_table">
+   <TR>
+      <TH COLSPAN="4">
+      <H3>Google Income Statement</H3>
+      </TH>
+   </TR>
+   <TR>
+      <TH>line item </TH>
+      <TH>2011</TH>
+      <TH>2012</TH>
+      <TH>2013</TH>
+   </TR>
+
+   <%= FinancialParse::GOOGLE_INCOME_STATEMENT.each_key do |key| %>
+   <TR ALIGN="CENTER">
+      <TD>  <%= key %>  </TD>
+      <TD>  <%= FinancialParse::GOOGLE_INCOME_STATEMENT[key][:"2011"] %> </TD>
+      <TD>  <%= FinancialParse::GOOGLE_INCOME_STATEMENT[key][:"2012"] %> </TD>
+      <TD>  <%= FinancialParse::GOOGLE_INCOME_STATEMENT[key][:"2013"] %> </TD>
+   </TR>
+   <% end %>
+
+</TABLE>
+

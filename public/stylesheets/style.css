@@ -30,7 +30,6 @@ table.MGMT {
 
 p.description {
  font-size: 13px;
- font-family: "Garamond";
 
 }
 
@@ -64,6 +63,8 @@ width: 80px;
   color: blue;
   width: 80px;
 }
+
+
 
 
 
