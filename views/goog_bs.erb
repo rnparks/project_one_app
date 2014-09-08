@@ -10,25 +10,22 @@
 <TABLE CLASS="financial_table">
    <TR>
       <TH COLSPAN="4">
-      <H3>Google Income Statement</H3>
+      <H3>Google Balance Sheet</H3>
       </TH>
    </TR>
    <TR ALIGN="right">
       <TH> </TH>
-      <TH>2011</TH>
       <TH>2012</TH>
       <TH>2013</TH>
    </TR>
 
-   <% FinancialParse::GOOGLE_INCOME_STATEMENT.each_key do |key| %>
+   <% FinancialParse::GOOGLE_BALANCE_SHEET.each_key do |key| %>
    <TR>
       <TD ALIGN="LEFT" class="key">  <%= key %>  </TD>
-      <TD ALIGN="RIGHT">  <%= FinancialParse::GOOGLE_INCOME_STATEMENT[key][:"2011"] %> </TD>
-      <TD ALIGN="RIGHT">  <%= FinancialParse::GOOGLE_INCOME_STATEMENT[key][:"2012"] %> </TD>
-      <TD ALIGN="RIGHT">  <%= FinancialParse::GOOGLE_INCOME_STATEMENT[key][:"2013"] %> </TD>
+      <TD ALIGN="RIGHT">  <%= FinancialParse::GOOGLE_BALANCE_SHEET[key][:"2012"] %> </TD>
+      <TD ALIGN="RIGHT">  <%= FinancialParse::GOOGLE_BALANCE_SHEET[key][:"2013"] %> </TD>
    </TR>
    <% end %>
 
 </TABLE>
 </div>
-

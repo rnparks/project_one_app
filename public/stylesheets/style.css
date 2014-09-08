@@ -92,6 +92,60 @@ td.key {
 }
 
 
+/* Twitter Feed Styling */
+div.twitter-company {
+  margin: 10px;
+  margin-left: 25%;
+}
+
+div.twitter-market {
+  position: absolute;
+  top: 87px;
+  left: 325px;
+  border: solid gray 1px;
+  width: 525px;
+  height: 350px;
+  position: right;
+}
+
+div.market-table {
+  border: solid gray 1px;
+  width: 300px;
+  height: 350px;
+}
 
 
+.WSJ-RSS {
+font-size: 12px;
+
+}
+
+.WSJ-RSS h3 {
+  text-align: left;
+}
+
+div.option-pricing {
+  margin-top: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+
+}
+
+.option-pricing input {
+  width: 100px;
+
+}
+
+.option-pricing label {
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: left;
+
+}
+
+.option-pricing form {
+  width: 300px;
+
+}
 

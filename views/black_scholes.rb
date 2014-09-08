@@ -11,6 +11,12 @@ def self.cnd(x)
     return w
   end
 
+  #all values must be entered as floats
+  # s = stock_price
+  # x = strike_price
+  # t = time in fraction of a year
+  # v = volatility measured in standard deviation
+
   def self.optionprice(callPutFlag, s, x, t, r, v)
     d1 = (Math.log(s/x)+(r+v*v/2.0)*t)/(v*Math.sqrt(t))
     d2 = d1-v*Math.sqrt(t)
