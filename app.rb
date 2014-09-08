@@ -4,7 +4,7 @@ require 'securerandom'
 require 'pry'
 require 'json'
 require './views/pricing'
-require './views/googlefinancials'
+require './views/google_financials'
 
 
 class App < Sinatra::Base
@@ -83,7 +83,6 @@ class App < Sinatra::Base
     end
 
     get('/goog/is') do
-
       render(:erb, :goog_is)
     end
 

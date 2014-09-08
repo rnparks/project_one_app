@@ -6,6 +6,7 @@ html{
   height: 100%;
   background-color: white;
 
+
 }
 
 body {
@@ -62,6 +63,32 @@ width: 80px;
   font-size: 10px;
   color: blue;
   width: 80px;
+}
+
+.financial_table th {
+  font-size: 15px;
+  width: 80px;
+
+}
+
+
+.financial_table td {
+  font-size: 14px;
+  color: blue;
+  width: auto;
+
+}
+
+div.financial_table {
+  width: 50%;
+  margin: 0 auto;
+}
+
+table.financial_table {
+}
+
+td.key {
+  width: 225px;
 }
 
 
