@@ -23,7 +23,7 @@ class App < Sinatra::Base
     CLIENT_ID_GOOGLE = "447724783620-c6vi7jn7cge9dn1n2p145vvfpjkke4oq.apps.googleusercontent.com"
     EMAIL_ADDRESS_GOOGLE = "447724783620-c6vi7jn7cge9dn1n2p145vvfpjkke4oq@developer.gserviceaccount.com"
     CLIENT_SECRET_GOOGLE = "40OqiWZWRzcA1cPt55eaTA09"
-    REDIRECT_URIS_GOOGLE = "https://frozen-escarpment-3408.herokuapp.com/oauth2callback"
+    REDIRECT_URIS_GOOGLE = "http://frozen-escarpment-3408.herokuapp.com/oauth2callback"
     JAVASCRIPT_ORIGINS = "none"
   end
 
