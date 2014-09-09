@@ -115,6 +115,23 @@ class App < Sinatra::Base
       render(:erb, :aapl)
     end
 
+    get('/aapl/is') do
+      render(:erb, :aapl_is)
+    end
+
+    get('/aapl/bs') do
+      render(:erb, :aapl_bs)
+    end
+
+    get('/aapl/cf') do
+      render(:erb, :aapl_cf)
+    end
+
+    get('/aapl/cn') do
+      render(:erb, :aapl_cn)
+    end
+
+
     ###############################################
     #  Option Pricing Commands #############################
 

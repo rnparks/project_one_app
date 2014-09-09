@@ -1,33 +1,95 @@
 
-html{
-  border: solid gray 1px;
-  margin: 10px;
-  padding: 2px;
-  height: 100%;
-  background-color: white;
-
-
-}
+/* Elements that affect the document */
 
 body {
   font-family: "Helvetica Neue", Helvetica;
   background-color: white;
-  height:99%;
 }
 
+body h1 {
+  text-align: center;
+}
 
-.search-bar {
+footer {
+    text-align: center;
+    position: bottom;
+}
+
+div.top {
+  width: 100%;
+  background-color: #F7F7F7;
+  border-bottom: solid #245DC1 1px;
+
+}
+
+.top form {
   width: 50%;
   margin: auto;
-
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
-table.MGMT {
-  width: 50%;
-  margin: auto;
-  border: solid black 1px;
-  font: color="blue";
+.top input {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
+div.market-master {
+  margin-top: 5px;
+  height: 410px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Elements that affect quote table on market page */
+
+div.market-table {
+  border: solid gray 1px;
+  width: 270px;
+  height: 400px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+/* Elements that affect bloomberg tv market page */
+div.BloombergTV {
+  position: relative;
+  margin-top: 5px;
+  top: -405px;
+  left: 300px;
+}
+
+div.twitter-market {
+  width: 300px;
+  height: 400px;
+  border: solid gray 1px;
+  position: relative;
+  margin-top: 5px;
+  margin-right: 5px;
+  top: -814px;
+  left: 920px;
+}
+
+.WSJ-RSS {
+font-size: 12px;
+}
+
+div.WSJ-RSS {
+  position: relative;
+  width: 1200px;
+  margin: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: dotted gray 1px;
+}
+
+.WSJ-RSS h3 {
+  text-align: left;
+}
+
 
 p.description {
  font-size: 13px;
@@ -80,55 +142,35 @@ width: 80px;
 }
 
 div.financial_table {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 
 table.financial_table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  width: auto;
 }
 
 td.key {
-  width: 225px;
+  width: 350px;
 }
 
 
 /* Twitter Feed Styling */
 div.twitter-company {
-  margin: 10px;
-  margin-left: 25%;
-}
-
-div.twitter-market {
-  position: absolute;
-  top: 87px;
-  left: 325px;
   border: solid gray 1px;
-  width: 525px;
-  height: 350px;
-  position: right;
+  width: 520px;
+  margin: 10px auto auto auto;
 }
 
-div.market-table {
-  border: solid gray 1px;
-  width: 300px;
-  height: 350px;
-}
-
-
-.WSJ-RSS {
-font-size: 12px;
-
-}
-
-.WSJ-RSS h3 {
-  text-align: left;
-}
 
 div.option-pricing {
   margin-top: 10px;
-  margin-left: 25%;
-  margin-right: 25%;
-
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px
 }
 
 .option-pricing input {
@@ -149,3 +191,8 @@ div.option-pricing {
 
 }
 
+div.snapshot {
+  margin-left: 10px;
+  margin-right: 10px;
+
+}

@@ -1,0 +1,28 @@
+
+
+
+<div CLASS="financial_table">
+<TABLE CLASS="financial_table">
+   <TR>
+      <TH COLSPAN="4">
+      <H3>Apple Income Statement</H3>
+      </TH>
+   </TR>
+   <TR ALIGN="right">
+      <TH> </TH>
+      <TH>2011</TH>
+      <TH>2012</TH>
+      <TH>2013</TH>
+   </TR>
+
+   <% FinancialParse::APPLE_INCOME_STATEMENT.each_key do |key| %>
+   <TR>
+      <TD ALIGN="LEFT" class="key">  <%= key %>  </TD>
+      <TD ALIGN="RIGHT">  <%= FinancialParse::APPLE_INCOME_STATEMENT[key][:"2011"] %> </TD>
+      <TD ALIGN="RIGHT">  <%= FinancialParse::APPLE_INCOME_STATEMENT[key][:"2012"] %> </TD>
+      <TD ALIGN="RIGHT">  <%= FinancialParse::APPLE_INCOME_STATEMENT[key][:"2013"] %> </TD>
+   </TR>
+   <% end %>
+
+</TABLE>
+</div>

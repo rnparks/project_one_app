@@ -3,17 +3,26 @@
   <head>
     <meta charset="utf-8">
 
-    <title>project_one_app</title>
+    <title>Ryan Parks Dashboard</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" media="all">
     <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all">
+
   </head>
 
 
   <body>
+
+    <div class="top">
+      <form method="POST" action="/market">
+      <label for="search"></label>
+      <input type="text" name="search" id="search"/>
+      </form>
+    </div>
     <%= yield %>
   </body>
+
 </html>

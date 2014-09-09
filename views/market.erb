@@ -1,16 +1,11 @@
 
+<h1> Market Page </h1>
 
-<div class="search-bar">
-<form method="POST" action="/market">
-  <label for="search"></label>
-  <input type="text" name="search" id="search" style="width:500px;"/>
-</form>
-</div>
+<div class="market-master">
 
 
-<h2 align="center"> Market Page </h>
 
-<div class="market-table">
+<div CLASS="market-table">
 <TABLE CLASS="equity-index">
    <TR>
       <TH COLSPAN="3">
@@ -97,21 +92,43 @@
 </TABLE>
 </div>
 
+
+
+
+<div class="BloombergTV">
+<iframe SRC='http://www.newtvworld.com/livetv/usa/bloombergtv.html' width='600' height='400' id=www.Newtvworld.com marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling='no'></iframe>
+</div>
+
+
 <div class="twitter-market">
 <a class="twitter-timeline" href="https://twitter.com/rnparks/lists/market-information" height="350" data-widget-id="509003823927410688">Tweets from https://twitter.com/rnparks/lists/market-information</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 
-<div class="WSJ-RSS">
+</div> <!--market master div -->
+
+<div align="left" class="WSJ-RSS">
 <h3>WSJ RSS Feed</h3>
    <% open(@url_wsj) do |rss| %>
       <% feed = RSS::Parser.parse(rss) %>
       <%= "Title: #{feed.channel.title}" %>
          <% feed.items.each do |item| %>
+            <br>
             <%= "Item: #{item.title}" %>
+            <%= "Item: #{item.description}" %>
+            <a href="<%= "#{item.link}" %>"><%= "Item: #{item.link}" %>   </a>
+            <br>
+
          <% end %>
       <% end %>
 </div>
+
+
+
+
+
+
+
 
 
 

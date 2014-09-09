@@ -1,18 +1,12 @@
 
-<div class="search-bar">
-<form method="POST" action="/market">
-  <label for="search"></label>
-  <input type="text" name="search" id="search" style="width:500px;"/>
-</form>
-</div>
 
 <!-- # s = stock_price
   # x = strike_price
   # t = time in fraction of a year
   # v = volatility measured in standard deviation
 -->
+<h1 align="center">Option Pricing Calculator</h1>
 <div class="option-pricing">
-<h3>Option Pricing Calculator</h3>
 <form method="POST" action="/option">
   <select name="select">
   <option value="c" selected>call</option>
@@ -36,10 +30,11 @@
   <br>
   <input type="submit" value="Price Option">
 </form>
+</div>
 
 <% if @option_price  %>
-<h3> The fair price for your option is: $<%= '%.2f' % @option_price %> </h3>
+<h3 align="center"> The fair price for your option is: $<%= '%.2f' % @option_price %> </h3>
 <% end %>
 
-</div>
+
 
