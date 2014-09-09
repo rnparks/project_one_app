@@ -19,18 +19,18 @@
    </TR>
    <TR ALIGN="CENTER">
       <TD>S&P500</TD>
-      <TD> <%= IndexPricing::SP500_Price %>    </TD>
-      <TD> <%= IndexPricing::SP500_MOVEMENT %>  </TD>
+      <TD> <%= Pricing::Index::SP500_Price %>    </TD>
+      <TD> <%= Pricing::Index::SP500_MOVEMENT %>  </TD>
    </TR>
    <TR ALIGN="CENTER">
       <TD>NASDAQ</TD>
-      <TD> <%= IndexPricing::NASDAQ_PRICE %>    </TD>
-      <TD> <%= IndexPricing::NASDAQ_MOVEMENT %>  </TD>
+      <TD> <%= Pricing::Index::NASDAQ_PRICE %>    </TD>
+      <TD> <%= Pricing::Index::NASDAQ_MOVEMENT %>  </TD>
    </TR>
    <TR ALIGN="CENTER">
       <TD>10yr</TD>
-      <TD> <%= IndexPricing::TEN_YR_PRICE %>    </TD>
-      <TD> <%= IndexPricing::TEN_YR_MOVEMENT %>  </TD>
+      <TD> <%= Pricing::Index::TEN_YR_PRICE %>    </TD>
+      <TD> <%= Pricing::Index::TEN_YR_MOVEMENT %>  </TD>
    </TR>
 </TABLE>
 
@@ -47,17 +47,17 @@
    </TR>
    <TR ALIGN="CENTER">
       <TD>EUR/USD</TD>
-      <TD> <%= CurrencyPricing::EUR_PRICE %>    </TD>
+      <TD> <%= Pricing::Currency::EUR_PRICE %>    </TD>
       <TD>   </TD>
    </TR>
    <TR ALIGN="CENTER">
       <TD>USD/BRL</TD>
-      <TD> <%= CurrencyPricing::BRL_PRICE %>    </TD>
+      <TD> <%= Pricing::Currency::BRL_PRICE %>    </TD>
       <TD> <%=  %>  </TD>
    </TR>
    <TR ALIGN="CENTER">
       <TD>USD/JPY</TD>
-      <TD> <%= CurrencyPricing::JPY_PRICE %>    </TD>
+      <TD> <%= Pricing::Currency::JPY_PRICE %>    </TD>
       <TD> <%=  %>  </TD>
    </TR>
 </TABLE>
@@ -76,18 +76,18 @@
    </TR>
    <TR ALIGN="CENTER">
       <TD>Oil</TD>
-      <TD> <%= CommodityPricing::OIL_PRICE %>    </TD>
-      <TD> <%= CommodityPricing::OIL_MOVEMENT %> </TD>
+      <TD> <%= Pricing::Commodity::OIL_PRICE %>    </TD>
+      <TD> <%= Pricing::Commodity::OIL_MOVEMENT %> </TD>
    </TR>
    <TR ALIGN="CENTER">
       <TD>Gold</TD>
-      <TD> <%= CommodityPricing::GOLD_PRICE  %>    </TD>
-      <TD> <%=  CommodityPricing::GOLD_MOVEMENT %>  </TD>
+      <TD> <%= Pricing::Commodity::GOLD_PRICE  %>    </TD>
+      <TD> <%=  Pricing::Commodity::GOLD_MOVEMENT %>  </TD>
    </TR>
    <TR ALIGN="CENTER">
       <TD>NatGas</TD>
-      <TD> <%= CommodityPricing::NATGAS_PRICE %>    </TD>
-      <TD> <%=  CommodityPricing::NATGAS_MOVEMENT %>  </TD>
+      <TD> <%= Pricing::Commodity::NATGAS_PRICE %>    </TD>
+      <TD> <%=  Pricing::Commodity::NATGAS_MOVEMENT %>  </TD>
    </TR>
 </TABLE>
 </div>

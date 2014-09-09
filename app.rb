@@ -2,11 +2,14 @@ require 'sinatra/base'
 require 'httparty'
 require 'securerandom'
 require 'json'
-require './views/pricing'
-require './views/google_financials'
-require './views/black_scholes'
 require 'rss'
 require 'open-uri'
+
+###### REQUIRE HELPERS #####
+
+require './helpers/financial_parse'
+require './helpers/black_scholes'
+require './helpers/pricing'
 
 
 class App < Sinatra::Base

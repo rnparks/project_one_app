@@ -1,8 +1,8 @@
-include Math
-
 module BlackScholes
+  include Math
+
 # Cumulative normal distribution
-def self.cnd(x)
+  def self.cnd(x)
     a1, a2, a3, a4, a5 = 0.31938153, -0.356563782, 1.781477937, -1.821255978, 1.330274429
     l = x.abs
     k = 1.0 / (1.0 + 0.2316419 * l)
@@ -28,6 +28,3 @@ def self.cnd(x)
   end
 
 end #module end
-
-
-
