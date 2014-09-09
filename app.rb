@@ -1,7 +1,6 @@
 require 'sinatra/base'
 require 'httparty'
 require 'securerandom'
-require 'pry'
 require 'json'
 require './views/pricing'
 require './views/google_financials'
