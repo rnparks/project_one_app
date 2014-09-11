@@ -25,16 +25,17 @@ class ApplicationController < Sinatra::Base
     CLIENT_ID_GOOGLE     = ENV["CLIENT_ID_GOOGLE"]
     EMAIL_ADDRESS_GOOGLE = ENV["EMAIL_ADDRESS_GOOGLE"]
     CLIENT_SECRET_GOOGLE = ENV["CLIENT_SECRET_GOOGLE"]
+    REDIRECT_URIS_GOOGLE = "http://frozen-escarpment-3408.herokuapp.com/oauth2callback"
     JAVASCRIPT_ORIGINS   = "none"
   end
 
-  configure :development do
-    REDIRECT_URIS_GOOGLE = "http://127.0.0.1:9292/oauth2callback"
-  end
+  # configure :development do
+  #   REDIRECT_URIS_GOOGLE = "http://127.0.0.1:9292/oauth2callback"
+  # end
 
-  configure :production do
-    REDIRECT_URIS_GOOGLE = "http://frozen-escarpment-3408.herokuapp.com/oauth2callback"
-  end
+  # configure :production do
+  #   REDIRECT_URIS_GOOGLE = "http://frozen-escarpment-3408.herokuapp.com/oauth2callback"
+  # end
 
   before do
     logger.info "Request Headers: #{headers}"
