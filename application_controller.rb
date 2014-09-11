@@ -22,11 +22,18 @@ class ApplicationController < Sinatra::Base
     enable :method_override
     enable :sessions
     set :session_secret, 'super secret'
-    CLIENT_ID_GOOGLE = "447724783620-c6vi7jn7cge9dn1n2p145vvfpjkke4oq.apps.googleusercontent.com"
-    EMAIL_ADDRESS_GOOGLE = "447724783620-c6vi7jn7cge9dn1n2p145vvfpjkke4oq@developer.gserviceaccount.com"
-    CLIENT_SECRET_GOOGLE = "40OqiWZWRzcA1cPt55eaTA09"
+    CLIENT_ID_GOOGLE     = ENV["CLIENT_ID_GOOGLE"]
+    EMAIL_ADDRESS_GOOGLE = ENV["EMAIL_ADDRESS_GOOGLE"]
+    CLIENT_SECRET_GOOGLE = ENV["CLIENT_SECRET_GOOGLE"]
+    JAVASCRIPT_ORIGINS   = "none"
+  end
+
+  configure :development do
+    REDIRECT_URIS_GOOGLE = "http://127.0.0.1:9292/oauth2callback"
+  end
+
+  configure :production do
     REDIRECT_URIS_GOOGLE = "http://frozen-escarpment-3408.herokuapp.com/oauth2callback"
-    JAVASCRIPT_ORIGINS = "none"
   end
 
   before do

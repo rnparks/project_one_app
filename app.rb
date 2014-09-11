@@ -1,5 +1,4 @@
 require './application_controller'
-
 class App < ApplicationController
 
 
@@ -16,13 +15,12 @@ class App < ApplicationController
   get('/oauth2callback') do
     code = params["code"]
     response = HTTParty.post("https://accounts.google.com/o/oauth2/token",
-      :body => {:code => code,
-                :client_id => CLIENT_ID_GOOGLE,
-                :client_secret => CLIENT_SECRET_GOOGLE,
-                :redirect_uri => REDIRECT_URIS_GOOGLE,
-                :grant_type => "authorization_code"
-      })
-
+      :body =>  { :code => code,
+                  :client_id => CLIENT_ID_GOOGLE,
+                  :client_secret => CLIENT_SECRET_GOOGLE,
+                  :redirect_uri => REDIRECT_URIS_GOOGLE,
+                  :grant_type => "authorization_code"
+                })
     session[:access_token_google] = response["access_token"]
     redirect to("/market")
   end
@@ -114,6 +112,6 @@ class App < ApplicationController
     volatility = params[:volatility].to_f
     @option_price = BlackScholes.optionprice(put_call, stock_price, strike_price, time_to_expire, risk_free_rate, volatility)
     render(:erb, :"options/option_pricing")
-  end #class end
+  end
 
-
+end #class end
