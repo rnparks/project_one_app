@@ -26,12 +26,9 @@ class App < ApplicationController
   end
 
   get('/market') do
-    if session[:access_token_google] == nil
-      redirect to('/')
-    else
+    RyanFunctions.password?
     @url_wsj = "http://online.wsj.com/xml/rss/3_7432.xml"
     render(:erb, :"market/market")
-    end
   end
 
   post('/market') do
@@ -48,24 +45,29 @@ class App < ApplicationController
   #  Google Commands #############################
 
   get('/goog/des') do
+    RyanFunctions.password?
     google_quote = HTTParty.get("http://download.finance.yahoo.com/d/quotes.csv?s=GOOG&f=l1.csv")
     @quote = google_quote.split(",")[0].to_f
     render(:erb, :"goog/des")
   end
 
   get('/goog/is') do
+    RyanFunctions.password?
     render(:erb, :"goog/is")
   end
 
   get('/goog/bs') do
+    RyanFunctions.password?
     render(:erb, :"goog/bs")
   end
 
   get('/goog/cf') do
+    RyanFunctions.password?
     render(:erb, :"goog/cf")
   end
 
   get('/goog/cn') do
+    RyanFunctions.password?
     render(:erb, :"goog/cn")
   end
 
@@ -74,24 +76,29 @@ class App < ApplicationController
     #  Apple Commands #############################
 
   get('/aapl/des') do
+    RyanFunctions.password?
     aapl_quote = HTTParty.get("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL&f=l1.csv")
     @quote = aapl_quote.split(",")[0].to_f
     render(:erb, :"aapl/des")
   end
 
   get('/aapl/is') do
+    RyanFunctions.password?
     render(:erb, :"aapl/is")
   end
 
   get('/aapl/bs') do
+    RyanFunctions.password?
     render(:erb, :"aapl/bs")
   end
 
   get('/aapl/cf') do
+    RyanFunctions.password?
     render(:erb, :"aapl/cf")
   end
 
   get('/aapl/cn') do
+    RyanFunctions.password?
     render(:erb, :"aapl/cn")
   end
 
@@ -100,6 +107,7 @@ class App < ApplicationController
   #  Option Pricing Commands #############################
 
   get('/option') do
+    RyanFunctions.password?
     render(:erb, :"options/option_pricing")
   end
 
