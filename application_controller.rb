@@ -22,14 +22,14 @@ class ApplicationController < Sinatra::Base
     enable :method_override
     enable :sessions
     set :session_secret, 'super secret'
-    CLIENT_ID_GOOGLE = ENV["CLIENT_ID_GOOGLE"]
-    EMAIL_ADDRESS_GOOGLE = ENV["EMAIL_ADDRESS_GOOGLE"]
-    CLIENT_SECRET_GOOGLE = ENV["CLIENT_SECRET_GOOGLE"]
-    JAVASCRIPT_ORIGINS   = "none"
+    JAVASCRIPT_ORIGINS    = "none"
   end
 
   configure :development do
     REDIRECT_URIS_GOOGLE = "http://127.0.0.1:9292/oauth2callback"
+    CLIENT_ID_GOOGLE      = ENV["CLIENT_ID_GOOGLE"]
+    EMAIL_ADDRESS_GOOGLE  = ENV["EMAIL_ADDRESS_GOOGLE"]
+    CLIENT_SECRET_GOOGLE  = ENV["CLIENT_SECRET_GOOGLE"]
   end
 
   configure :production do
