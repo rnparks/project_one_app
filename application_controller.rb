@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
     enable :method_override
     enable :sessions
     set :session_secret, 'super secret'
-    CLIENT_ID_GOOGLE     = ENV["CLIENT_ID_GOOGLE"]
+    CLIENT_ID_GOOGLE = ENV["CLIENT_ID_GOOGLE"]
     EMAIL_ADDRESS_GOOGLE = ENV["EMAIL_ADDRESS_GOOGLE"]
     CLIENT_SECRET_GOOGLE = ENV["CLIENT_SECRET_GOOGLE"]
     JAVASCRIPT_ORIGINS   = "none"
