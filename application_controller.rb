@@ -23,9 +23,9 @@ class ApplicationController < Sinatra::Base
     enable :sessions
     set :session_secret, 'super secret'
     JAVASCRIPT_ORIGINS    = "none"
-    CLIENT_ID_GOOGLE      = ENV["CLIENT_ID_GOOGLE"]
-    EMAIL_ADDRESS_GOOGLE  = ENV["EMAIL_ADDRESS_GOOGLE"]
-    CLIENT_SECRET_GOOGLE  = ENV["CLIENT_SECRET_GOOGLE"]
+    CLIENT_ID_GOOGLE      = ENV['CLIENT_ID_GOOGLE']
+    EMAIL_ADDRESS_GOOGLE  = ENV['EMAIL_ADDRESS_GOOGLE']
+    CLIENT_SECRET_GOOGLE  = ENV['CLIENT_SECRET_GOOGLE']
   end
 
   configure :development do
