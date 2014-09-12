@@ -46,5 +46,9 @@ class ApplicationController < Sinatra::Base
     logger.info "Response Headers: #{response.headers}"
   end
 
+  def password?
+    redirect to('/') if session[:access_token_google] == nil
+  end
+
 end #end of ApplicationController Class
 
